@@ -8,10 +8,10 @@ This adds a page to wordpress with services of our church. You can rewatch uploa
 
 ## Developing
 
-Fetch the dependencies using composer
+Fetch the dependencies using PHP composer.
 
 ```cmd
-php install
+composer install
 ```
 
 Make a Zip of the full code with the vendor folder included and upload to your wordpress site.
