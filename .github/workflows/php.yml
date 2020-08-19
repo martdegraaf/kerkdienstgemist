@@ -1,4 +1,4 @@
-name: PHP Composer
+name: Build kerkdienstgemist Wordpress Plugin Zip folder
 
 on:
   push:
