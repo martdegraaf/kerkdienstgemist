@@ -39,7 +39,12 @@ jobs:
     - uses: actions/upload-artifact@v2
       with:
         name: kerkdienstgemist-artifact
-        path: 'release.zip' 
+        path: 'release.zip'
+    
+    - uses: ncipollo/release-action@v1
+      with:
+        artifacts: "kerkdienstgemist-artifact"
+        token: ${{ secrets.GITHUB_TOKEN }}
     # Add a test script to composer.json, for instance: "test": "vendor/bin/phpunit"
     # Docs: https://getcomposer.org/doc/articles/scripts.md
 
