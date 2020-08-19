@@ -1,5 +1,5 @@
 # kerkdienstgemist
-This is a Wordpress plugin.
+This is a Wordpress plugin. To download go to releases.
 
 
 ## Why this template?
