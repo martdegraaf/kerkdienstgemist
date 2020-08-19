@@ -35,6 +35,11 @@ jobs:
       with:
         filename: 'release.zip'
         exclusions: '*.git* /*node_modules/* .editorconfig'
+        
+    - uses: actions/upload-artifact@v2
+      with:
+        name: kerkdienstgemist-artifact
+        path: 'release.zip' 
     # Add a test script to composer.json, for instance: "test": "vendor/bin/phpunit"
     # Docs: https://getcomposer.org/doc/articles/scripts.md
 
