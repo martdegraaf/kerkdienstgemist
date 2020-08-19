@@ -1,5 +1,5 @@
 {
-    "name": "kerkdienstgemist",
+    "name": "martdegraaf/kerkdienstgemist",
     "description": "Wordpress plugin voor het tonen van Vimeo videos.",
     "require": {
         "vimeo/vimeo-api": "^3.0"
