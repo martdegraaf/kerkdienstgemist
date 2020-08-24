@@ -29,8 +29,8 @@ use Vimeo\Vimeo;
 
             //terugknop
             jQuery(".back").click(function () {
-                jQuery('#list').html('<center><img src="/wp-content/plugins/kerkdienstgemist/images/loading.gif" /></center>');
-                jQuery.get("/wp-content/plugins/kerkdienstgemist/gemist.snippet.php", function (data) {
+                jQuery('#list').html('<center><img src="<?= plugin_dir_url(__DIR__); ?>images/loading.gif" /></center>');
+                jQuery.get("<?= plugin_dir_url(__DIR__); ?>gemist.snippet.php", function (data) {
                     history.pushState('data', '', url);
                     jQuery('#list').html(data);
                 });
@@ -54,7 +54,7 @@ $groupResponse = $client->request('/groups/' . $groupid, [], 'GET');
 
 //Draw header
 echo '<div id="download" style="display:none;"></div><br />';
-echo '<img class="back" src="/wp-content/plugins/kerkdienstgemist/images/button_back.png" /> <b>' . $groupResponse["body"]["name"] . '</b>';
+echo '<img class="back" src="'. plugin_dir_url(__DIR__) . 'images/button_back.png" /> <b>' . $groupResponse["body"]["name"] . '</b>';
 
 echo "<table width=\"100%\">
                         <tr>
@@ -72,7 +72,7 @@ foreach ($videoResponse["body"]["data"] as $dienst) {
     echo '<td>' . $dienst["name"] . '</td>';
 
     if ($dienst["duration"] > 0) {
-        echo '<td><img alt="Afspelen" src="/wp-content/plugins/kerkdienstgemist/images/play.png" width="15px" height="15px"/></a></td>';
+        echo '<td><img alt="Afspelen" src="' . plugin_dir_url(__DIR__) . 'images/play.png" width="15px" height="15px"/></a></td>';
     } else {
         echo '<td class="procent" video="' . $dienst->id . '"><i>Binnenkort beschikbaar</i></td>';
     }
