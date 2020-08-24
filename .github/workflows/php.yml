@@ -39,7 +39,7 @@ jobs:
     - uses: actions/upload-artifact@v2
       with:
         name: kerkdienstgemist-artifact
-        path: 'release.zip'
+        path: 'kerkdienstgemist.zip'
     
     - uses: ncipollo/release-action@v1
       with:
