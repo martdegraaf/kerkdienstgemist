@@ -27,7 +27,7 @@ jobs:
     - name: Archive Release
       uses: thedoctor0/zip-release@master
       with:
-        filename: 'release.zip'
+        filename: 'kerkdienstgemist.zip'
         exclusions: '*.git* /*node_modules/* .editorconfig'
 
     - uses: actions/upload-artifact@v2
@@ -36,5 +36,5 @@ jobs:
         path: 'kerkdienstgemist.zip'
     - uses: ncipollo/release-action@v1
       with:
-        artifacts: "kerkdienstgemist-artifact"
+        artifacts: "kerkdienstgemist.zip"
         token: ${{ secrets.GITHUB_TOKEN }}
