@@ -36,5 +36,5 @@ jobs:
         path: 'kerkdienstgemist.zip'
     - uses: ncipollo/release-action@v1
       with:
-        artifacts: "kerkdienstgemist.zip"
+        artifacts: "kerkdienstgemist-artifact"
         token: ${{ secrets.GITHUB_TOKEN }}
