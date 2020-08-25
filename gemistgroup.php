@@ -18,6 +18,10 @@ use Vimeo\Vimeo;
                 data = '<iframe src="https://player.vimeo.com/video/' + id + '?&autoplay=1;api=1;player_id=test" width="100%" height="382,5" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe><div id="div_download">';
 
                 jQuery("#player").html(data);
+                //Scroll to player
+                jQuery([document.documentElement, document.body]).animate({
+                    scrollTop: jQuery("#player").offset().top
+                }, 2000);
 
                 // $("#div_download").show();
                 //
@@ -54,7 +58,7 @@ $groupResponse = $client->request('/groups/' . $groupid, [], 'GET');
 
 //Draw header
 echo '<div id="download" style="display:none;"></div><br />';
-echo '<img class="back" src="'. plugin_dir_path( __FILE__ ) . 'images/button_back.png" /> <b>' . $groupResponse["body"]["name"] . '</b>';
+echo '<img class="back" src="'. plugins_url('images/button_back.png',  __FILE__ ) . '" /> <b>' . $groupResponse["body"]["name"] . '</b>';
 
 echo "<table width=\"100%\">
                         <tr>
@@ -72,7 +76,7 @@ foreach ($videoResponse["body"]["data"] as $dienst) {
     echo '<td>' . $dienst["name"] . '</td>';
 
     if ($dienst["duration"] > 0) {
-        echo '<td><img alt="Afspelen" src="' . plugin_dir_path( __FILE__ ) . 'images/play.png" width="15px" height="15px"/></a></td>';
+        echo '<td><img alt="Afspelen" src="' . plugins_url('images/play.png',  __FILE__ ) . '" width="15px" height="15px"/></a></td>';
     } else {
         echo '<td class="procent" video="' . $dienst->id . '"><i>Binnenkort beschikbaar</i></td>';
     }
