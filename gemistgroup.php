@@ -29,8 +29,8 @@ use Vimeo\Vimeo;
 
             //terugknop
             jQuery(".back").click(function () {
-                jQuery('#list').html('<center><img src="<?= plugin_dir_path( __FILE__ ); ?>images/loading.gif" /></center>');
-                jQuery.get("<?= plugin_dir_path( __FILE__ ); ?>gemist.snippet.php", function (data) {
+                jQuery('#list').html('<center><img src="<?= plugins_url('images/loading.gif',  __FILE__ ); ?>" /></center>');
+                jQuery.get("<?= plugins_url('gemist.snippet.php',  __FILE__ ); ?>gemist.snippet.php", function (data) {
                     history.pushState('data', '', url);
                     jQuery('#list').html(data);
                 });

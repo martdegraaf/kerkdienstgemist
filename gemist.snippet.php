@@ -14,8 +14,8 @@ use Vimeo\Vimeo;
             url = window.location.pathname;
             jQuery('.groep').click(function () {
                 var idvideo = jQuery(this).attr('id');
-                jQuery('#list').html('<center><img src="<?= plugin_dir_path( __FILE__ ); ?>images/loading.gif" /></center>');
-                jQuery.get("<?php echo plugin_dir_path( __FILE__ ); ?>gemistgroup.php", {id: idvideo}, function (data) {
+                jQuery('#list').html('<center><img src="<?= plugins_url('images/loading.gif',  __FILE__ ); ?>" /></center>');
+                jQuery.get("<?php echo plugins_url('gemistgroup.php', __FILE__ ); ?>", {id: idvideo}, function (data) {
                     history.pushState('data', '', '?groep=' + idvideo);
                     jQuery('#list').html(data);
                 });
