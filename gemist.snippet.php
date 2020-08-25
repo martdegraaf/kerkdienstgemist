@@ -71,9 +71,9 @@ use Vimeo\Vimeo;
         echo '</tr>';
         foreach ($groups as $group) {
             $uriparts = explode("/", $group["uri"]);
-            echo '<tr>';
+            echo '<tr class="groep" id="' . end($uriparts) . '">';
             echo '<td><img src="' . $group["pictures"]["sizes"][0]["link"] . '" /></td>'
-                . '<td><a class="groep" href="javascript:void(0)" id="' . end($uriparts) . '">' . $group["name"] . '</a></td>'
+                . '<td>' . $group["name"] . '</td>'
                 . '<td>' . $group["metadata"]["connections"]["videos"]["total"] . '</td>';
             echo '</tr>';
         }
