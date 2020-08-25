@@ -25,10 +25,10 @@ td{
     vertical-align: middle;
 }
 
-.play, .group{
+.play, .groep{
     cursor: pointer;
 }
 
-.play:hover, .group:hover{
+.play:hover, .groep:hover{
     background-color: #f39929;
 }
